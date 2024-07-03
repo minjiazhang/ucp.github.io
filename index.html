@@ -186,7 +186,7 @@
       <img src="./static/images/ucp.jpg"
       class="interpolation-image"
       alt="UCP main results image."/>
-      <h2 class="subtitle has-text-centered">
+      <h2 class="subtitle">
         UCP boosts large-scale training efficiency: 
         <ul>
           <li>🚀 Flexible change of parallelism (PP, SP, TP, ZeRO-DP) or GPU count mid-stream </li>
@@ -233,6 +233,23 @@
         </div>
         <p>
           UCP supports flexible checkpoint transformation along any training parallelism techniques (e.g., ZeRO-DP, TP, PP, SP). It enables elastic resource management, allowing easy scaling up and down of training and fine-tuning with varying hardware resources. UCP includes a convenient language-integrated programming interface that allows users to describe various parallelism patterns and provides transformation operations to easily transform distributed checkpoints into UCP. UCP also provides cross-framework support, enabling resuming training of checkpoints from other popular training frameworks, such as HuggingFace transformer accelerate and PyTorch lightning with DeepSpeed as a backend.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Evaluation</h2>
+        </div>
+        <p>
+          We evaluate UCP on several real-world large-scale LLM models, including Megatron-LM GPT, LLaMA , and sparse MoEs. Our evaluation results show that UCP enables system capabilities to resume training with a wide range of parallelism strategies, such as ZeRO-1/2/3 data parallelism, tensor-slicing parallelism, pipeline parallelism, and sequence parallelism, on elastic resources without compromising model quality. Our evaluation also shows that UCP is lightweight, adding zero cost when saving checkpoints and resuming training with different parallelism strategies at a small cost of UCP transformation. UCP has been used to train the BLOOM 176B model and several real-world large-scale models at Microsoft such as Phi-3, greatly improving these models's resilience to hardware failures during training and reducing their training time by exploiting elastic capacity
         </p>
       </div>
     </div>
